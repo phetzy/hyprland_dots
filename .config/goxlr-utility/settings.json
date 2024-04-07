@@ -1,0 +1,77 @@
+{
+  "show_tray_icon": true,
+  "tts_enabled": false,
+  "allow_network_access": false,
+  "profile_directory": "/home/fetzy/.local/share/goxlr-utility/profiles",
+  "mic_profile_directory": "/home/fetzy/.local/share/goxlr-utility/mic-profiles",
+  "samples_directory": "/home/fetzy/.local/share/goxlr-utility/samples",
+  "presets_directory": "/home/fetzy/.local/share/goxlr-utility/presets",
+  "icons_directory": "/home/fetzy/.local/share/goxlr-utility/icons",
+  "logs_directory": "/home/fetzy/.local/share/goxlr-utility/logs",
+  "log_level": "Debug",
+  "open_ui_on_launch": false,
+  "activate": null,
+  "devices": {
+    "S200600881DI7": {
+      "profile": "Default-Phetzarelli",
+      "mic_profile": "AT2040",
+      "hold_delay": 500,
+      "sampler_pre_buffer": null,
+      "chat_mute_mutes_mic_to_chat": true,
+      "lock_faders": false,
+      "enable_monitor_with_fx": false,
+      "shutdown_commands": [
+        {
+          "LoadMicProfile": [
+            "AT2040",
+            false
+          ]
+        },
+        {
+          "LoadProfile": [
+            "Default-Phetzarelli",
+            false
+          ]
+        },
+        {
+          "LoadProfileColours": "Default-Phetzarelli"
+        }
+      ],
+      "sleep_commands": [
+        {
+          "LoadMicProfile": [
+            "AT2040",
+            false
+          ]
+        },
+        {
+          "LoadProfile": [
+            "Default-Phetzarelli",
+            false
+          ]
+        },
+        {
+          "LoadProfileColours": "Default-Phetzarelli"
+        }
+      ],
+      "wake_commands": [
+        {
+          "LoadMicProfile": [
+            "AT2040",
+            false
+          ]
+        },
+        {
+          "LoadProfile": [
+            "Default-Phetzarelli",
+            false
+          ]
+        },
+        {
+          "LoadProfileColours": "Default-Phetzarelli"
+        }
+      ]
+    }
+  },
+  "sample_gain": {}
+}

@@ -1,0 +1,160 @@
+{
+// sourced from header module //
+
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "height": 35,
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+
+
+	"modules-left": ["custom/left","hyprland/window","custom/right","custom/left","custom/spotify","custom/weather","custom/right","custom/left","temperature","custom/right","custom/left","tray","custom/right",],
+	"modules-center": ["custom/left","hyprland/workspaces","custom/right"],
+	"modules-right": ["custom/left","network","custom/right","custom/left","pulseaudio","custom/right","custom/left","clock","custom/right"],
+
+    "custom/spotify": {
+        "exec": "/usr/bin/python3 ~/.config/waybar/scripts/mediaplayer.py --player spotify",
+        "format": "{} ",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+    },
+
+ 
+   "network": {
+        "tooltip": true,
+        "format-wifi": "<span foreground='#689d6a'> {bandwidthDownBytes}</span> <span foreground='#fabd2f'> {bandwidthUpBytes}</span>",
+        "format-ethernet": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
+        "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+        "format-linked": "󰈀 {ifname} (No IP)",
+        "format-disconnected": " 󰖪 ",
+        "tooltip-format-disconnected": "Disconnected",
+        "interval": 2,
+        "on-click-right": "nm-connection-editor"
+  },
+
+
+     "temperature": {
+    // "thermal-zone": 2,
+    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    // "critical-threshold": 80,
+    // "format-critical": "{temperatureC}°C ",
+    "format": "{temperatureF}°F "
+    },
+
+     "hyprland/window": {
+        "format": "  {}",
+        "separate-outputs": true,
+        "rewrite": {
+            "vivek@ArchVivek:(.*)": "$1 ",
+            "(.*) — Mozilla Firefox": "$1 󰈹",
+            "(.*)Mozilla Firefox": "Firefox 󰈹",
+            "(.*) - Visual Studio Code": "$1 󰨞",
+            "(.*)Visual Studio Code": "Code 󰨞",
+            "(.*) Dolphin": "$1 󰉋",
+            "(.*)Spotify": "Spotify 󰓇",
+            "(.*)Steam": "Steam 󰓓",
+            "on-click": "~/.config/hypr/scripts/Rofi-launcher.sh"
+        }
+	},
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+        }
+    },
+
+    "custom/weather": {
+    "exec": "python ~/.config/waybar/weather.py",
+    "restart-interval": 100,
+    "return-type": "json",
+    "on-click": "xdg-open https://weather.com/weather/today/l/85fc4de6bba303dc6cc073ffd935703c13359bb11ee9f05035d081b6083d3184"
+    // "format-alt": "{alt}",
+    },   
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+ 
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "婢",
+        "on-click": "pavucontrol -t 3",
+        "on-click-middle": "~/.config/hypr/scripts/volumecontrol.sh -o m",
+        "on-scroll-up": "~/.config/hypr/scripts/volumecontrol.sh -o i",
+        "on-scroll-down": "~/.config/hypr/scripts/volumecontrol.sh -o d",
+        "tooltip-format": "{icon}",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+   }
+    },
+
+    "tray": {
+      "icon-size": 20,
+        "spacing": 9
+    },
+
+
+  "clock": {
+    "interval": 60,
+    "format": "{:%H:%M}",
+    "max-length": 25,
+    "on-click": "~/.config/eww/scripts/toggle_control_center.sh"
+ },
+
+
+   "backlight": {
+    "device": "intel_backlight",
+    "on-scroll-up": "light -A 7",
+    "on-scroll-down": "light -U 7",
+    "format": "{icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      ""
+    ]
+    },
+
+// modules for padding //
+
+    "custom/left": {
+        "format": " ",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+    "custom/right": {
+        "format": " ",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+}

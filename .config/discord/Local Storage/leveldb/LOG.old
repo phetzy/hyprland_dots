@@ -1,0 +1,26 @@
+2024/03/21-23:11:52.186 8f2 Reusing MANIFEST /home/fetzy/.config/discord/Local Storage/leveldb/MANIFEST-000001
+2024/03/21-23:11:52.187 8f2 Recovering log #52
+2024/03/21-23:11:52.187 8f2 Reusing old log /home/fetzy/.config/discord/Local Storage/leveldb/000052.log 
+2024/03/21-23:14:25.286 16bb Level-0 table #56: started
+2024/03/21-23:14:25.305 16bb Level-0 table #56: 750135 bytes OK
+2024/03/21-23:14:25.315 16bb Delete type=0 #52
+2024/03/21-23:14:25.315 16bb Compacting 4@0 + 2@1 files
+2024/03/21-23:14:25.323 16bb Generated table #57@0: 12 keys, 2234889 bytes
+2024/03/21-23:14:25.335 16bb Generated table #58@0: 87 keys, 775542 bytes
+2024/03/21-23:14:25.335 16bb Compacted 4@0 + 2@1 files => 3010431 bytes
+2024/03/21-23:14:25.345 16bb compacted to: files[ 0 2 1 0 0 0 0 ]
+2024/03/21-23:14:25.345 16bb Delete type=2 #45
+2024/03/21-23:14:25.345 16bb Delete type=2 #46
+2024/03/21-23:14:25.345 16bb Delete type=2 #48
+2024/03/21-23:14:25.345 16bb Delete type=2 #50
+2024/03/21-23:14:25.345 16bb Delete type=2 #53
+2024/03/21-23:14:25.345 16bb Delete type=2 #56
+2024/03/21-23:36:52.735 16bb Level-0 table #60: started
+2024/03/21-23:36:52.742 16bb Level-0 table #60: 18740 bytes OK
+2024/03/21-23:36:52.751 16bb Delete type=0 #55
+2024/03/22-00:07:52.735 140b7 Level-0 table #62: started
+2024/03/22-00:07:52.742 140b7 Level-0 table #62: 15446 bytes OK
+2024/03/22-00:07:52.751 140b7 Delete type=0 #59
+2024/03/22-00:25:52.734 197c6 Level-0 table #64: started
+2024/03/22-00:25:52.741 197c6 Level-0 table #64: 18289 bytes OK
+2024/03/22-00:25:52.751 197c6 Delete type=0 #61
